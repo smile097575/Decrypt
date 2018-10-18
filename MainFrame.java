@@ -15,6 +15,8 @@ public class MainFrame extends JFrame {
     private JMenuItem jmiClose = new JMenuItem("CLOSE");
     private JMenuItem jmiExit = new JMenuItem("EXIT");
     private JMenuItem jmiOX = new JMenuItem("OX");
+    private JMenuItem jmiD = new JMenuItem("Decrypt");
+
 
 
 
@@ -35,6 +37,7 @@ public class MainFrame extends JFrame {
        jmF.add(jmiClose);
        jmF.add(jmiExit);
        jmG.add(jmiOX);
+       jmT.add(jmiD);
 
            jmiExit.addActionListener(new ActionListener() {
                 @Override
@@ -51,6 +54,15 @@ public class MainFrame extends JFrame {
                     OXG.setVisible(true);
                 }
             });
+
+        jmiD.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Decrypt DE = new Decrypt( MainFrame.this);
+                DE.setVisible(true);
+            }
+        });
+
         }
 
     }
